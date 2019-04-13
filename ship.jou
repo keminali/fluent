@@ -1,0 +1,7 @@
+rc e387_wave.cas.gz
+rd e387_2550.dat.gz
+solve/dual-time-iterate 600 20
+solve/set/time-step 0.01
+wd e387_3000.dat.gz
+exit
+yes
