@@ -1,0 +1,1426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Apocrita</title>
+<!-- 2019-04-20 Sat 10:14 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="kaiming" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/bigblow/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/bigblow/css/bigblow.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/bigblow/css/hideshow.css"/>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/bigblow.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/hideshow.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Apocrita</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Apocrita Linux Parallel OS</a>
+<ul>
+<li><a href="#sec-1-1">1.1. OS&#x2013;CentOS</a></li>
+<li><a href="#sec-1-2">1.2. login</a>
+<ul>
+<li><a href="#sec-1-2-1">1.2.1. Setting up SSH key based access to Apocrita</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-3">1.3. submitting jobs</a>
+<ul>
+<li><a href="#sec-1-3-1">1.3.1. two node example</a></li>
+<li><a href="#sec-1-3-2">1.3.2. scripts</a></li>
+<li><a href="#sec-1-3-3">1.3.3. Job Runtimes</a></li>
+<li><a href="#sec-1-3-4">1.3.4. Environment variables</a></li>
+<li><a href="#sec-1-3-5">1.3.5. job output</a></li>
+<li><a href="#sec-1-3-6">1.3.6. SMP job (one node)</a></li>
+<li><a href="#sec-1-3-7">1.3.7. Parallel job  (multiple nodes)</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-4">1.4. job status</a>
+<ul>
+<li><a href="#sec-1-4-1">1.4.1. Checking on a Completed Job</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-5">1.5. Journal file</a>
+<ul>
+<li><a href="#sec-1-5-1">1.5.1. save image</a></li>
+<li><a href="#sec-1-5-2">1.5.2. 2nd stokes wave</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-6">1.6. Glossary</a>
+<ul>
+<li><a href="#sec-1-6-1">1.6.1. Core</a></li>
+<li><a href="#sec-1-6-2">1.6.2. References</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-7">1.7. wiki</a>
+<ul>
+<li><a href="#sec-1-7-1">1.7.1. slot</a></li>
+<li><a href="#sec-1-7-2">1.7.2. CPU Core</a></li>
+<li><a href="#sec-1-7-3">1.7.3. Node</a></li>
+<li><a href="#sec-1-7-4">1.7.4. Scheduler</a></li>
+<li><a href="#sec-1-7-5">1.7.5. jobs</a></li>
+<li><a href="#sec-1-7-6">1.7.6. slot</a></li>
+<li><a href="#sec-1-7-7">1.7.7. Queue</a></li>
+<li><a href="#sec-1-7-8">1.7.8. MPI</a></li>
+<li><a href="#sec-1-7-9">1.7.9. GPU</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-8">1.8. Starting ANSYS Fluent on a Linux System</a></li>
+<li><a href="#sec-1-9">1.9. Running ANSYS Fluent in Batch Mode</a></li>
+<li><a href="#sec-1-10">1.10. 6GB 4 core vs 6 core 4GB</a></li>
+<li><a href="#sec-1-11">1.11. nodes</a>
+<ul>
+<li><a href="#sec-1-11-1">1.11.1. node status</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-12">1.12. Node Selection</a>
+<ul>
+<li><a href="#sec-1-12-1">1.12.1. architecture type</a></li>
+<li><a href="#sec-1-12-2">1.12.2. node types</a></li>
+<li><a href="#sec-1-12-3">1.12.3. nxv node</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-13">1.13. storage usage</a></li>
+<li><a href="#sec-1-14">1.14. hold jobs</a></li>
+<li><a href="#sec-1-15">1.15. Further Information</a></li>
+<li><a href="#sec-1-16">1.16. Job exit status</a></li>
+<li><a href="#sec-1-17">1.17. FAQ</a>
+<ul>
+<li><a href="#sec-1-17-1">1.17.1. Error: Non-conformal periodic interface with empty intersection.</a></li>
+<li><a href="#sec-1-17-2">1.17.2. How many number of core for parallel running?</a></li>
+<li><a href="#sec-1-17-3">1.17.3. hwloc 1.11.1 has encountered what looks like an error from the operating system.</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-18">1.18. References</a></li>
+<li><a href="#sec-1-19">1.19. Citation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Apocrita Linux Parallel OS</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+keywords: Linux, HPC, Apocrita, parallel 
+</p>
+
+<p>
+To run ANSYS in Linux cluster, you need Shell scripts (<code>.sh</code> ) and journal file ( <code>.jou</code>)
+</p>
+<ul class="org-ul">
+<li><b>Shell scripts</b> is used to request computational resources and open ANSYS software,  refer to <a href="#sec-1-3">1.3</a>
+</li>
+<li><b>Journal file</b> is a list of command (batch model)n for Fluent,  refer to <a href="#sec-1-5">1.5</a>
+</li>
+</ul>
+</div>
+
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> OS&#x2013;CentOS</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Resources
+</p>
+
+<p>
+parallel ansys jobs up to 128 cores (4 nxv nodes). <a href="https://docs.hpc.qmul.ac.uk/using/#parallel-job">https://docs.hpc.qmul.ac.uk/using/#parallel-job</a>
+</p>
+
+<p>
+Module
+</p>
+
+<p>
+Ansys 18
+</p>
+
+<p>
+Check module available?
+</p>
+
+<p>
+Module avail, <a href="https://docs.hpc.qmul.ac.uk/using/UsingModules/">https://docs.hpc.qmul.ac.uk/using/UsingModules/</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> login</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>use "MobaXterm" software to login in via SSH
+</li>
+</ul>
+
+<p>
+<b>Account</b>
+Old account
+</p>
+
+<p>
+ssh -X exw110@login.hpc.qmul.ac.uk 
+</p>
+
+<p>
+New account
+</p>
+
+<p>
+ssh  exw110@login2.hpc.qmul.ac.uk 
+</p>
+
+<p>
+Password: a((**1***8***5
+</p>
+
+<p>
+IT research support account: exw***@qmul.ac.uk
+</p>
+
+<p>
+To change passwords: <a href="https://pass.hpc.qmul.ac.uk/">https://pass.hpc.qmul.ac.uk/</a> 
+</p>
+
+<p>
+Remote host: login.hpc.qmul.ac.uk
+ username: exw***
+</p>
+
+
+<p>
+If you want to change your password, log in to
+frontend1.apocrita.hpc.qmul.ac.uk    
+and type "passwd" (without the quotes) at the prompt.
+</p>
+</div>
+
+
+
+<div id="outline-container-sec-1-2-1" class="outline-4">
+<h4 id="sec-1-2-1"><span class="section-number-4">1.2.1</span> <a href="https://docs.hpc.qmul.ac.uk/intro/sshkeys/#mobaxterm">Setting up SSH key based access to Apocrita</a></h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+ssh-keygen
+</p>
+
+<p>
+ssh-copy-id exw***@login.hpc.qmul.ac.uk
+</p>
+
+<p>
+ssh exw***@login.hpc.qmul.ac.uk
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> submitting jobs</h3>
+<div class="outline-text-3" id="text-1-3">
+</div><div id="outline-container-sec-1-3-1" class="outline-4">
+<h4 id="sec-1-3-1"><span class="section-number-4">1.3.1</span> two node example</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+#!/bin/sh
+#$ -cwd                 # Set the working directory for the job 
+#$ -j y                 #combine the standard output and the standard error stream.
+#$ -m bea               #get notifications on job start, finish and abortion.
+#$ -M k.ai@qmul.ac.uk
+#$ -l h<sub>rt</sub>=48:0:0       #request 48 hour runtime
+#$ -pe parallel 64      #parallel environment, multiple nodes, 64 cores (2 nxv nodes: 64/32=2)
+#$ -l h<sub>rt</sub>=24:0:0        #running time, 4 hour
+#$ -l infiniband=nxv    #node type: nxv node, each node has 32 cores
+#$ -l ansys=64          #request ansys licence for 64 cores
+</p>
+
+<p>
+module load ansys     #load ansys 
+fluent 3ddp -g -rsh -t$NSLOTS -i e387un.jou
+</p>
+
+
+<p>
+to submit a job, use <code>qsub &lt;scirpt name&gt;</code> command
+i.e. <code>qsub udf.sh</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3-2" class="outline-4">
+<h4 id="sec-1-3-2"><span class="section-number-4">1.3.2</span> scripts</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<p>
+The main purpose of a job script is to request the required resources and setup the environment. 
+The main resources to be requested on the cluster are <b>cores</b>, <b>memory</b> and <b>runtime</b>.
+</p>
+
+<p>
+a simple job script requesting a single core, 1GB of ram and 24 hours runtime:
+</p>
+<pre class="example">
+#!/bin/sh
+#$ -cwd           #execute the job from the Current Working Directory.
+#$ -pe smp 1      # Request 1 node, 1 core
+#$ -l h_rt=24:0:0 # Request 24 hour runtime
+#$ -l h_vmem=1G   # Request 1GB RAM
+./code
+</pre>
+</div>
+<ol class="org-ol"><li><a id="sec-1-3-2-1" name="sec-1-3-2-1"></a>syntax<br  /><div class="outline-text-5" id="text-1-3-2-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left"><code>smp</code></td>
+<td class="left">#Single Machine Processing   (1 node)</td>
+</tr>
+
+<tr>
+<td class="left"><code>-pe</code></td>
+<td class="left"># Parallel Environment</td>
+</tr>
+
+<tr>
+<td class="left"><code>#$ -cwd</code></td>
+<td class="left"># Set the working directory for the job</td>
+</tr>
+
+<tr>
+<td class="left"><code>#$ -j y</code></td>
+<td class="left">#combine the standard output and the standard error stream.</td>
+</tr>
+
+<tr>
+<td class="left"><code>#$ -m bea</code></td>
+<td class="left">#get notifications on job Begin, End and Abortion.</td>
+</tr>
+
+<tr>
+<td class="left"><code>$NSLOTS</code></td>
+<td class="left">the number of cores/processes/slots the job will use</td>
+</tr>
+
+<tr>
+<td class="left"><code>-pe smp 4</code></td>
+<td class="left">#  parallel environment, single node, 4 cores</td>
+</tr>
+
+<tr>
+<td class="left"><code>-pe parallel 64</code></td>
+<td class="left">#     parallel environment, multiple node, 64 cores</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>
+<code>#$ &lt;resource&gt;</code>     #specify resources
+<code>#$ -l h_rt=24:0:0</code>  #wallclock runtime 
+<code>#$ -l excl</code>            #request a full node and ensure that the maximum amount of available memory is used by your job
+<code>pe</code>                #request a parallel environment - this will usually be <code>smp</code> to <i>request a number of cores on the same node</i> or <b>parallel</b> to request more than one whole machine.
+<code>#$ -pe smp</code>   # parallel environment, 1 node
+<code>-l exclusive=true</code>  #requests exclusive use of a node.
+<code>#$ -l infiniband=nxv</code>    # for parallel job, Choose infiniband island ( nxv)
+<code>#$ -pe parallel</code> # parallel environment, parallel machine (node), more than 1  node
+<code>#$ -pe parallel 128</code>     # Request 128 cores/4 nxv nodes
+<code>#$ -M k.ai@qmul.ac.uk</code>   #specify email address
+<code>-cwd</code>  #execute the job from the current working directory.
+<code>-j y</code>     #combine the standard output and the standard error stream.
+ <a href="https://docs.hpc.qmul.ac.uk/apps/sems/ansys/">one node</a>
+</p>
+</div>
+</li></ol>
+</div>
+<div id="outline-container-sec-1-3-3" class="outline-4">
+<h4 id="sec-1-3-3"><span class="section-number-4">1.3.3</span> Job Runtimes</h4>
+<div class="outline-text-4" id="text-1-3-3">
+<ul class="org-ul">
+<li>Jobs requesting more than 72 hours may not be scheduled as quickly as those requesting less.
+</li>
+<li id="checkpointing">a method of regularly dumping the job's state so that it can be restarted
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-3-4" class="outline-4">
+<h4 id="sec-1-3-4"><span class="section-number-4">1.3.4</span> Environment variables</h4>
+<div class="outline-text-4" id="text-1-3-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">Variable</td>
+<td class="left">Description</td>
+</tr>
+
+<tr>
+<td class="left">SGE<sub>O</sub><sub>WORKDIR</sub></td>
+<td class="left">Jobscript directory</td>
+</tr>
+
+<tr>
+<td class="left">SGE<sub>CWD</sub><sub>PATH</sub></td>
+<td class="left">Working directory</td>
+</tr>
+
+<tr>
+<td class="left">TMPDIR</td>
+<td class="left">Job specific temporary directory</td>
+</tr>
+
+<tr>
+<td class="left">JOB<sub>NAME</sub></td>
+<td class="left">Job Name</td>
+</tr>
+
+<tr>
+<td class="left">QUEUE</td>
+<td class="left">Queue</td>
+</tr>
+
+<tr>
+<td class="left">PE</td>
+<td class="left">Parallel Environment</td>
+</tr>
+
+<tr>
+<td class="left">NSLOTS</td>
+<td class="left">Number of slots</td>
+</tr>
+
+<tr>
+<td class="left">NHOSTS</td>
+<td class="left">Number of hosts</td>
+</tr>
+
+<tr>
+<td class="left">SGE<sub>HGR</sub><sub>m</sub><sub>mem</sub><sub>free</sub></td>
+<td class="left">Total memory requested (slots * mem)</td>
+</tr>
+
+<tr>
+<td class="left">SGE<sub>HGR</sub><sub>gpu</sub></td>
+<td class="left">ID of GPU granted</td>
+</tr>
+
+<tr>
+<td class="left">SGE<sub>BINDING</sub></td>
+<td class="left">Cores job is bound to on host</td>
+</tr>
+
+<tr>
+<td class="left">SGE<sub>TASK</sub><sub>FIRST</sub></td>
+<td class="left">First task in array</td>
+</tr>
+
+<tr>
+<td class="left">SGE<sub>TASK</sub><sub>LAST</sub></td>
+<td class="left">Last task in array</td>
+</tr>
+
+<tr>
+<td class="left">SGE<sub>TASK</sub><sub>STEPSIZE</sub></td>
+<td class="left">Array step size</td>
+</tr>
+
+<tr>
+<td class="left">SGE<sub>TASK</sub><sub>ID</sub></td>
+<td class="left">Current Task ID in array</td>
+</tr>
+
+<tr>
+<td class="left">PE<sub>HOSTFILE</sub></td>
+<td class="left">Location of host file for MPI</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3-5" class="outline-4">
+<h4 id="sec-1-3-5"><span class="section-number-4">1.3.5</span> job output</h4>
+<div class="outline-text-4" id="text-1-3-5">
+<p>
+Output from the job will include an output and an error file 
+<code>&lt;jobname&gt;.o&lt;jobID&gt;</code> #output file
+<code>&lt;jobname&gt;.e&lt;jobID&gt;</code> #error file
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-3-6" class="outline-4">
+<h4 id="sec-1-3-6"><span class="section-number-4">1.3.6</span> SMP job (<a href="https://docs.hpc.qmul.ac.uk/apps/sems/ansys/">one node</a>)</h4>
+<div class="outline-text-4" id="text-1-3-6">
+<dl class="org-dl">
+<dt> SMP job </dt><dd>multiple  cores on a single node (machine) with shared memory, e.g. using OpenMP
+</dd>
+</dl>
+<p>
+Shared-Memory Parallelism (SMP) is when <i>work is divided between multiple threads or processes running on a single machine</i> 
+and these threads have access to common (shared) memory.
+</p>
+<dl class="org-dl">
+<dt> OpenMP </dt><dd>Open Multi-Processing
+</dd>
+</dl>
+<pre class="example">
+#running multiple cores on one node  
+
+#!/bin/sh
+#$ -cwd                 # Set the working directory for the job 
+#$ -j y                 #combine the standard output and the standard error stream.
+#$ -m bea               #get notifications on job start, finish and abortion.
+#$ -M k.ai@qmul.ac.uk
+#$ -l node_type=nxv       #node type,  can be 'sm', 'dn' or 'nxv' for smp jobs.
+#$ -pe smp 2       #parallel environment, 1 node, 2 cores
+#$ -l h_vmem=4G    #4GB memory per core
+#$ -l h_rt=24:0:0       #request 48 hour runtime
+#$ -l ansys=2         #request ansys licence for 64 cores
+module load ansys    #load ansys 
+fluent 2ddp -g -rsh -t$NSLOTS -i cylinder.jou
+</pre>
+</div>
+
+<ol class="org-ol"><li><a id="sec-1-3-6-1" name="sec-1-3-6-1"></a>ansys example<br  /><div class="outline-text-5" id="text-1-3-6-1">
+<p>
+Here is an example <b>Mechanical APDL</b> job running on <b>4 cores</b> and <b>16G of ram</b> on <b>a single node.</b>
+</p>
+<pre class="example">
+#!/bin/bash
+#$ -cwd                            # Set the working directory for the job to the current directory
+#$ -j y                               #combine the standard output and the standard error stream.
+#$ -pe smp 4                       #A single node, 4 cores
+#$ -l h_rt=4:0:0                  # 1 hour runtime
+#$ -l h_vmem=4G              # Request 4GB RAM per core
+#$ -l ansys=4                    # ansys licence  for 4 cores
+
+module load ansys
+mapdl -np $NSLOTS -b &lt; [SIM-FILE]
+</pre>
+</div>
+</li>
+<li><a id="sec-1-3-6-2" name="sec-1-3-6-2"></a>Fluent job<br  /><div class="outline-text-5" id="text-1-3-6-2">
+<p>
+Here is an example of a <b>fluent 3d</b> job running on <b>4 cores</b> and <b>16G of ram on a single node</b>.
+</p>
+<ol class="org-ol">
+<li>running time
+</li>
+<li>memeory per core
+</li>
+<li>number of cores
+</li>
+<li>number of ansys licences (one core one licence)
+</li>
+</ol>
+<pre class="example">
+#!/bin/bash
+#$ -cwd
+#$ -j y
+#$ -pe smp 4
+#$ -l h_rt=4:0:0
+#$ -l h_vmem=4G
+#$ -l ansys=4
+
+module load ansys
+fluent 3d -g -rsh -t$NSLOTS -i [SIM-FILE]
+</pre>
+</div>
+</li></ol>
+</div>
+
+
+
+
+<div id="outline-container-sec-1-3-7" class="outline-4">
+<h4 id="sec-1-3-7"><span class="section-number-4">1.3.7</span> Parallel job  (multiple nodes)</h4>
+<div class="outline-text-4" id="text-1-3-7">
+<p>
+parallel licence for max 128 cores<br  />
+For parallel jobs, each node is booked for exclusive use and uses all available memory on each node: you do not need to specify a memory requirement.
+</p>
+
+<p>
+A low latency infiniband interconnect is provided for parallel jobs running over multiple nodes simultaneously using MPI.
+</p>
+
+<p>
+Here is an example of a <b>Fluent 3d douple precision</b>  job running on <b>64 cores</b>  across <b>2  nxv nodes</b>.
+</p>
+<pre class="example">
+#For parallel jobs, each node is booked for exclusive use and uses all available memory on each node: you do not need to specify a memory  requirement.
+# add "-l infiniband=" command
+#!/bin/bash
+#$ -cwd                       # Set the working directory for the job       
+#$ -j y                          #combine the standard output and the standard error stream
+#$ -m bea                #get notifications on job start, finish and abortion.
+#$ -pe parallel 64      #parallel environment, multiple nodes, 64 cores (2 nxv nodes: 64/32=2)
+#$ -l h_rt=4:0:0        #running time, 4 hour
+#$ -l infiniband=nxv  #node type: nxv node, each node has 32 cores
+#$ -l ansys=64          #request ansys licence for 64 cores
+
+module load ansys
+fluent 3ddp -g -rsh -t$NSLOTS -i udf.jou
+</pre>
+</div>
+
+
+<ol class="org-ol"><li><a id="sec-1-3-7-1" name="sec-1-3-7-1"></a>Parallel Job Memory<br  /><div class="outline-text-5" id="text-1-3-7-1">
+<p>
+For parallel jobs, each node is booked for <b>exclusive use</b> and uses all available memory on each node: you do not need to specify a memory requirement.
+</p>
+
+
+
+
+
+<pre class="example">
+#!/bin/sh
+#$ -cwd                 # Set the working directory for the job to the current directory
+#$ -j y
+#$ -pe parallel 128     # Request 128 cores/4 nxv nodes
+#$ -l infiniband=nxv    # Choose infiniband island (ccn nxn nxv)
+#$ -l h_rt=24:0:0       # Request 24 hour runtime
+
+module load intelmpi
+
+mpirun -np $NSLOTS ./code
+</pre>
+</div>
+</li></ol>
+</div>
+</div>
+
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> job status</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+To see the status of a job (e.g. job  297259)
+&gt; qstat -j  297259
+</p>
+
+<p>
+To see the resources you are currently requesting
+&gt;qstat -r
+</p>
+
+<p>
+shows all of the jobs waiting to be run, in the order of priority
+&gt; showqueue
+</p>
+
+<p>
+Note:  # means commend
+qsub test.sh  #submit job "test.sh" 
+ls -l #list of software/doc
+passwd #password
+cd #change directory
+qdel  #delete jobs
+qstat #check the status of the jobs
+qrsh   #request interactive nodes on the cluster
+tab #add suffix automatically
+</p>
+</div>
+
+<div id="outline-container-sec-1-4-1" class="outline-4">
+<h4 id="sec-1-4-1"><span class="section-number-4">1.4.1</span> Checking on a Completed Job</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<ul class="org-ul">
+<li>qacct  #report and account for Sun Grid Engine usage
+</li>
+</ul>
+
+<p>
+The <code>qacct</code> command shows the GE accounting information and 
+can be used to check on  
+</p>
+<ul class="org-ul">
+<li>the resources used by a given job that has completed
+</li>
+<li>its exit status.
+</li>
+</ul>
+
+<p>
+For example:
+</p>
+
+<p>
+&gt; qacct -j &lt;job id&gt;
+</p>
+
+<p>
+will list the accounting information for a finished job with the given job ID.
+</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="outline-container-sec-1-5" class="outline-3">
+<h3 id="sec-1-5"><span class="section-number-3">1.5</span> Journal file</h3>
+<div class="outline-text-3" id="text-1-5">
+<ul class="org-ul">
+<li>read case file
+</li>
+<li>read data file
+</li>
+<li>save residuals
+</li>
+<li>save force/moment
+</li>
+<li>save sectional figure
+</li>
+</ul>
+</div>
+<div id="outline-container-sec-1-5-1" class="outline-4">
+<h4 id="sec-1-5-1"><span class="section-number-4">1.5.1</span> save image</h4>
+</div>
+<div id="outline-container-sec-1-5-2" class="outline-4">
+<h4 id="sec-1-5-2"><span class="section-number-4">1.5.2</span> 2nd stokes wave</h4>
+<div class="outline-text-4" id="text-1-5-2">
+<p>
+rc st<sub>e387</sub><sub>w</sub><sub>hy</sub>-14M<sub>open</sub><sub>invisid</sub>.cas.gz
+rd st<sub>e387</sub><sub>w</sub><sub>hy</sub>-14M<sub>open</sub><sub>invisid</sub>.dat.gz
+;set drag moment and monitor in y coordinate on "blades" surface
+solve/monitors/force/unscaled? yes
+solve/monitors/force/set-drag-monitor cd yes blades () no yes thrust-history no no 0 1 0
+solve/monitors/force/set-moment-monitor moment yes blades () no yes moment-history no no 0 0 0 0 1 0    
+;Coupled solver, Coupled with Volume Fractions [no] 
+;/solve/set p-v-coupling 24  no 
+;/solve/set/p-v-controls [courant-number] [explicit momentum] [explicit pressure] 
+;/solve/set/p-v-controls  1 0.5 0.5 
+;/solve/set/under-relaxation/k 0.5           
+;/solve/set/under-relaxation/epsilon  0.5   
+;/solve/set/under-relaxation/turb-viscosity 0.5
+(display "Save the residual in a file") (newline)
+    (let ((writefile (lambda (p)
+    (define np (length (residual-history "iteration")))
+    (let loop ((i 0))
+    (if (not (= i np))
+    (begin (define j (+ i 1))
+    (display (list-ref (residual-history "iteration") (- np j)) p) (display " " p)
+    (display (list-ref (residual-history "continuity") (- np j)) p) (display " " p)
+    (display (list-ref (residual-history "x-velocity") (- np j)) p) (display " " p)
+    (display (list-ref (residual-history "y-velocity") (- np j)) p) (display " " p)
+    (display (list-ref (residual-history "z-velocity") (- np j)) p) (display " " p)
+    (display (list-ref (residual-history "k") (- np j)) p) (display " " p)
+    (display (list-ref (residual-history "omega") (- np j)) p)
+    (newline p)
+    (loop (+ i 1))
+    )
+    )
+    )
+    ) )
+    (output-port (open-output-file "residual<sub>1000</sub><sub>e387</sub><sub>udf</sub>.dat")))
+    (writefile output-port)
+    (close-output-port output-port))
+solve/iterate 3000
+wd e387<sub>st</sub><sub>hy</sub><sub>14M</sub><sub>open</sub><sub>channel</sub><sub>3k</sub>.dat.gz
+exit
+yes
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-6" class="outline-3">
+<h3 id="sec-1-6"><span class="section-number-3">1.6</span> Glossary</h3>
+<div class="outline-text-3" id="text-1-6">
+</div><div id="outline-container-sec-1-6-1" class="outline-4">
+<h4 id="sec-1-6-1"><span class="section-number-4">1.6.1</span> <a href="https://www.nics.tennessee.edu/hpc-glossary">Core</a></h4>
+<div class="outline-text-4" id="text-1-6-1">
+<p>
+A core is an individual processor: the part of a computer which actually executes programs. CPUs used to have a single core, and the terms were interchangeable. In recent years, several cores, or processors, have been manufactured on a single CPU chip, which may be referred to as a multiprocessor. It is important to note, however, that the relationship between the cores may vary radically: AMD's Opteron, Intel's Itanium, and IBM's Cell have very distinct setups.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-6-2" class="outline-4">
+<h4 id="sec-1-6-2"><span class="section-number-4">1.6.2</span> References</h4>
+<div class="outline-text-4" id="text-1-6-2">
+<p>
+<a href="https://www.nics.tennessee.edu/hpc-glossary">https://www.nics.tennessee.edu/hpc-glossary</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-7" class="outline-3">
+<h3 id="sec-1-7"><span class="section-number-3">1.7</span> wiki</h3>
+<div class="outline-text-3" id="text-1-7">
+</div><div id="outline-container-sec-1-7-1" class="outline-4">
+<h4 id="sec-1-7-1"><span class="section-number-4">1.7.1</span> slot</h4>
+</div>
+<div id="outline-container-sec-1-7-2" class="outline-4">
+<h4 id="sec-1-7-2"><span class="section-number-4">1.7.2</span> CPU Core</h4>
+<div class="outline-text-4" id="text-1-7-2">
+<p>
+Computers have a Central Processing Unit (CPU) which may have one or more CPU cores 
+</p>
+<ul class="org-ul">
+<li>A CPU core can only do one thing at a time. 
+</li>
+</ul>
+<p>
+If there are many things that a CPU core must do it will start to become overloaded. Multiple CPU cores can run multiple applications at the same time.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-7-3" class="outline-4">
+<h4 id="sec-1-7-3"><span class="section-number-4">1.7.3</span> Node</h4>
+<div class="outline-text-4" id="text-1-7-3">
+<p>
+A node is a <b>physical machine</b> within the HPC.
+ A node will have one or more CPUs, lots of memory (RAM), hard disks, network connections etc. 
+</p>
+</div>
+
+<ol class="org-ol"><li><a id="sec-1-7-3-1" name="sec-1-7-3-1"></a>types of nodes<br  /><div class="outline-text-5" id="text-1-7-3-1">
+<p>
+a storage node, a master node, and computer nodes
+</p>
+<dl class="org-dl">
+<dt> storage node </dt><dd>home directories or research data stored, 
+</dd>
+<dt> master node </dt><dd>deals with the operations of the HPC such as scheduling and most importantly, 
+</dd>
+<dt> compute nodes </dt><dd>run your applications.
+</dd>
+</dl>
+</div>
+</li></ol>
+</div>
+
+<div id="outline-container-sec-1-7-4" class="outline-4">
+<h4 id="sec-1-7-4"><span class="section-number-4">1.7.4</span> Scheduler</h4>
+</div>
+
+<div id="outline-container-sec-1-7-5" class="outline-4">
+<h4 id="sec-1-7-5"><span class="section-number-4">1.7.5</span> jobs</h4>
+<div class="outline-text-4" id="text-1-7-5">
+<p>
+You submit your jobs to the scheduler by writing a small script called a job submission script. This will contain information such as the amount of memory you require, how long your job will run for etc. 
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-7-6" class="outline-4">
+<h4 id="sec-1-7-6"><span class="section-number-4">1.7.6</span> slot</h4>
+<div class="outline-text-4" id="text-1-7-6">
+<p>
+A slot is what the scheduler uses to represent one or more CPU cores. One slot represents one CPU core.
+</p>
+
+<p>
+The reason that cores are not simply refered to as cores is that one may wish to have two CPU cores per slot in the case of hyper threaded processors.
+Queue <sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-7-7" class="outline-4">
+<h4 id="sec-1-7-7"><span class="section-number-4">1.7.7</span> Queue</h4>
+<div class="outline-text-4" id="text-1-7-7">
+<p>
+A queue is comprised of several slots on one or more nodes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-7-8" class="outline-4">
+<h4 id="sec-1-7-8"><span class="section-number-4">1.7.8</span> MPI</h4>
+<div class="outline-text-4" id="text-1-7-8">
+<p>
+MPI=Message Passing Interface
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-7-9" class="outline-4">
+<h4 id="sec-1-7-9"><span class="section-number-4">1.7.9</span> GPU</h4>
+<div class="outline-text-4" id="text-1-7-9">
+<p>
+GPU=graphics processing units 
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-8" class="outline-3">
+<h3 id="sec-1-8"><span class="section-number-3">1.8</span> Starting ANSYS Fluent on a Linux System</h3>
+<div class="outline-text-3" id="text-1-8">
+<p>
+4.1.3. Starting ANSYS Fluent on a Linux System, getting started guide
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-9" class="outline-3">
+<h3 id="sec-1-9"><span class="section-number-3">1.9</span> Running ANSYS Fluent in Batch Mode</h3>
+<div class="outline-text-3" id="text-1-9">
+<p>
+4.2. Running ANSYS Fluent in Batch Mode, getting started guide
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-10" class="outline-3">
+<h3 id="sec-1-10"><span class="section-number-3">1.10</span> 6GB 4 core vs 6 core 4GB</h3>
+<div class="outline-text-3" id="text-1-10">
+<p>
+use 6 core is faster
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-11" class="outline-3">
+<h3 id="sec-1-11"><span class="section-number-3">1.11</span> nodes</h3>
+<div class="outline-text-3" id="text-1-11">
+<p>
+<a href="https://docs.hpc.qmul.ac.uk/nodes/">https://docs.hpc.qmul.ac.uk/nodes/</a>
+</p>
+<ul class="org-ul">
+<li>use "nxv" node for parallel
+</li>
+<li>"sm" and "dn" node don't support parallel
+</li>
+<li>The sm nodes are usually full so your job is more likely going to run on a dn node.
+</li>
+</ul>
+</div>
+<div id="outline-container-sec-1-11-1" class="outline-4">
+<h4 id="sec-1-11-1"><span class="section-number-4">1.11.1</span> node status</h4>
+<div class="outline-text-4" id="text-1-11-1">
+<p>
+nodestatus
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-12" class="outline-3">
+<h3 id="sec-1-12"><span class="section-number-3">1.12</span> Node Selection</h3>
+<div class="outline-text-3" id="text-1-12">
+</div><div id="outline-container-sec-1-12-1" class="outline-4">
+<h4 id="sec-1-12-1"><span class="section-number-4">1.12.1</span> architecture type</h4>
+<div class="outline-text-4" id="text-1-12-1">
+<p>
+<code>-l cpuarch=intel</code>  #Require architecture type=intel
+<code>-l cpuarch=amd</code>  #Require architecture type=amd
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-12-2" class="outline-4">
+<h4 id="sec-1-12-2"><span class="section-number-4">1.12.2</span> node types</h4>
+<div class="outline-text-4" id="text-1-12-2">
+<p>
+<code>-l node_type=dn</code>  #node type: dn
+<code>-l node_type=nxv</code> #node type: <a href="https://docs.hpc.qmul.ac.uk/nodes/nxv/#nxv-nodes">nxv</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-12-3" class="outline-4">
+<h4 id="sec-1-12-3"><span class="section-number-4">1.12.3</span> nxv node</h4>
+<div class="outline-text-4" id="text-1-12-3">
+<p>
+node number: 36 <br  />
+each node has 32 cores  <br  />
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-13" class="outline-3">
+<h3 id="sec-1-13"><span class="section-number-3">1.13</span> storage usage</h3>
+<div class="outline-text-3" id="text-1-13">
+<p>
+To check how much disk memory used
+<code>qmquota</code> 
+</p>
+
+
+<p>
+<a href="https://docs.hpc.qmul.ac.uk/storage/quota/">Quotas</a> are used to keep track of storage space that is being used on per-user or per-group basis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-14" class="outline-3">
+<h3 id="sec-1-14"><span class="section-number-3">1.14</span> hold jobs</h3>
+<div class="outline-text-3" id="text-1-14">
+<p>
+Holding a job means it remains in the queue but will not be considered for scheduling until the hold is removed or the requirement is met.
+<code>qhold &lt;job_id&gt;</code>    # Hold a job
+<code>qrls &lt;job_id&gt;</code>       # Release a job
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-15" class="outline-3">
+<h3 id="sec-1-15"><span class="section-number-3">1.15</span> Further Information</h3>
+<div class="outline-text-3" id="text-1-15">
+<ul class="org-ul">
+<li>The <a href="https://docs.hpc.qmul.ac.uk/using/manpages/">man pages</a> on the cluster systems give information on the queuing system and MPI functions.
+</li>
+<li>The MPI Specifications contain information on the MPI functions including examples and advice.
+</li>
+<li><a href="https://docs.hpc.qmul.ac.uk/apps/hpclibraries/">HPC Libraries</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1-16" class="outline-3">
+<h3 id="sec-1-16"><span class="section-number-3">1.16</span> <a href="http://www.hpc.mcgill.ca/index.php/starthere/81-doc-pages/205-faq">Job exit status</a></h3>
+<div class="outline-text-3" id="text-1-16">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="right" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="right">137</th>
+<th scope="col" class="left">more resources are needed than what you asked for, or more than is available on the machine (memory, walltime, &#x2026;)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="right">0</td>
+<td class="left">Job Success!</td>
+</tr>
+
+<tr>
+<td class="right">1</td>
+<td class="left">General error</td>
+</tr>
+</tbody>
+</table>
+<p>
+Exit codes between 128 and 173 indicate that the process ended due to receiving a signal. Examples:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="right" />
+
+<col  class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="right">128</td>
+<td class="left">Invalid argument to exit()</td>
+</tr>
+
+<tr>
+<td class="right">131</td>
+<td class="left">SIGQUIT: ctrl-\, core dumped</td>
+</tr>
+
+<tr>
+<td class="right">132</td>
+<td class="left">SIGILL: Malformed, unknown, or priviledged instruction</td>
+</tr>
+
+<tr>
+<td class="right">133</td>
+<td class="left">SIGTRAP: Debugger breakpoint</td>
+</tr>
+
+<tr>
+<td class="right">134</td>
+<td class="left">SIGABRT: Process itself called abort</td>
+</tr>
+
+<tr>
+<td class="right">135</td>
+<td class="left">SIGBUS: Bus error (on Guillimin: often a file system issue)</td>
+</tr>
+
+<tr>
+<td class="right">136</td>
+<td class="left">SIGFPE: Bad arithmetic operation (e.g. division by zero)</td>
+</tr>
+
+<tr>
+<td class="right">137</td>
+<td class="left">SIGKILL (e.g. kill -9 command)</td>
+</tr>
+
+<tr>
+<td class="right">139</td>
+<td class="left">SIGSEGV: Segmentation Fault</td>
+</tr>
+
+<tr>
+<td class="right">143</td>
+<td class="left">SIGTERM (probably not canceljob or oom)</td>
+</tr>
+
+<tr>
+<td class="right">151</td>
+<td class="left">SIGURG: Urgent condition on socket</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Exit codes between 174 and 253 indicate a "Fatal error signal".
+Exit codes larger than 253:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="right" />
+
+<col  class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="right">254</td>
+<td class="left">Command invoked cannot execute</td>
+</tr>
+
+<tr>
+<td class="right">255</td>
+<td class="left">Command not found, possible path problem</td>
+</tr>
+
+<tr>
+<td class="right">265</td>
+<td class="left">SIGKILL (e.g. kill -9 command), possible out-of-memory error</td>
+</tr>
+
+<tr>
+<td class="right">271</td>
+<td class="left">SIGTERM (e.g. canceljob or oom), possible memory error</td>
+</tr>
+
+<tr>
+<td class="right">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-sec-1-17" class="outline-3">
+<h3 id="sec-1-17"><span class="section-number-3">1.17</span> FAQ</h3>
+<div class="outline-text-3" id="text-1-17">
+</div><div id="outline-container-sec-1-17-1" class="outline-4">
+<h4 id="sec-1-17-1"><span class="section-number-4">1.17.1</span> Error: Non-conformal periodic interface with empty intersection.</h4>
+<div class="outline-text-4" id="text-1-17-1">
+<p>
+This is likely due to incorrect specification of periodic
+offset values. Please check the offset values specified
+and recreate the interface.
+</p>
+
+<p>
+Error: Couldn't intersect threads 29 and 30.
+</p>
+
+<p>
+Error: Couldn't intersect threads 29 and 30.\n
+Error Object: #f
+</p>
+</div>
+<ol class="org-ol"><li><a id="sec-1-17-1-1" name="sec-1-17-1-1"></a>answer<br  /><div class="outline-text-5" id="text-1-17-1-1">
+<p>
+the Geo part is not 120 degree, define the angle in the Geo and remesh
+</p>
+</div>
+</li></ol>
+</div>
+
+
+<div id="outline-container-sec-1-17-2" class="outline-4">
+<h4 id="sec-1-17-2"><span class="section-number-4">1.17.2</span> How many number of core for parallel running?</h4>
+<div class="outline-text-4" id="text-1-17-2">
+<p>
+old Fluent lost efficiency for more than 8 nodes
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-17-3" class="outline-4">
+<h4 id="sec-1-17-3"><span class="section-number-4">1.17.3</span> hwloc 1.11.1 has encountered what looks like an error from the operating system.</h4>
+<div class="outline-text-4" id="text-1-17-3">
+<p>
+L3 (cpuset 0x000003f0) intersects with NUMANode (P#0 cpuset 0x0000003f) without inclusion!
+Error occurred in topology.c line 981
+</p>
+
+<p>
+answer:
+</p>
+
+<p>
+don't use "sm" <a href="https://docs.hpc.qmul.ac.uk/nodes/">node</a>
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-18" class="outline-3">
+<h3 id="sec-1-18"><span class="section-number-3">1.18</span> References</h3>
+<div class="outline-text-3" id="text-1-18">
+<p>
+For more information on the HPC systems operated by
+IT Services - Research please visit
+<a href="https://www.hpc.qmul.ac.uk/">https://www.hpc.qmul.ac.uk/</a>
+</p>
+
+<p>
+Specific information on using Apocrita is available at
+<a href="https://www.hpc.qmul.ac.uk/twiki/bin/view/HPC/MidPlusInformation">https://www.hpc.qmul.ac.uk/twiki/bin/view/HPC/MidPlusInformation</a>
+</p>
+
+<p>
+Use of the system is subject to the QMUL IT Regulations:
+<a href="http://www.its.qmul.ac.uk/ITregsETC/itreg.shtml">http://www.its.qmul.ac.uk/ITregsETC/itreg.shtml</a>
+</p>
+
+<p>
+<a href="https://wiki.rc.ucl.ac.uk/wiki/ANSYS_Fluent_on_Legion">https://wiki.rc.ucl.ac.uk/wiki/ANSYS_Fluent_on_Legion</a>
+</p>
+
+<p>
+<a href="https://www.bwhpc-c5.de/wiki/index.php/Ansys">https://www.bwhpc-c5.de/wiki/index.php/Ansys</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-19" class="outline-3">
+<h3 id="sec-1-19"><span class="section-number-3">1.19</span> Citation</h3>
+<div class="outline-text-3" id="text-1-19">
+<p>
+This research utilised Queen Mary's Apocrita HPC facility, supported by
+QMUL Research-IT. <a href="http://doi.org/10.5281/zenodo.438045">http://doi.org/10.5281/zenodo.438045</a>
+</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p>DEFINITION NOT FOUND.</p></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: kaiming</p>
+<p class="date">Created: 2019-04-20 Sat 10:14</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
